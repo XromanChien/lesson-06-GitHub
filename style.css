@@ -1,0 +1,119 @@
+:root {
+  color-scheme: light;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", sans-serif;
+  color: #292929;
+  background: #f8f7f5;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: 64px 24px;
+}
+
+.profile {
+  width: 100%;
+  max-width: 560px;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  line-height: 1.4;
+  font-weight: 650;
+  letter-spacing: 0.03em;
+}
+
+.subtitle {
+  margin: 14px 0 0;
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.9;
+}
+
+.photo-placeholder {
+  display: grid;
+  place-items: center;
+  width: min(100%, 260px);
+  aspect-ratio: 1;
+  height: auto;
+  object-fit: cover;
+  margin: 36px auto;
+  border-radius: 16px;
+  background: #e2e2e2;
+  color: #666;
+  font-size: 0.875rem;
+  letter-spacing: 0.12em;
+}
+
+.introduction {
+  max-width: 440px;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.9;
+  color: #555;
+}
+
+.social-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.social-buttons button,
+.social-buttons a {
+  min-width: 0;
+  min-height: 48px;
+  padding: 12px 8px;
+  border: 1px solid #d8d6d2;
+  border-radius: 10px;
+  background: #fff;
+  color: #333;
+  font: inherit;
+  font-size: 0.875rem;
+  overflow-wrap: anywhere;
+  cursor: pointer;
+}
+
+.social-buttons button:hover,
+.social-buttons a:hover {
+  background: #eeedea;
+  border-color: #aaa7a1;
+}
+
+.social-buttons button:active,
+.social-buttons a:active {
+  background: #e2e0db;
+}
+
+.social-buttons button:focus-visible,
+.social-buttons a:focus-visible {
+  outline: 2px solid #444;
+  outline-offset: 4px;
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 40px 20px;
+  }
+
+  .social-buttons {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.social-buttons a {
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+}
